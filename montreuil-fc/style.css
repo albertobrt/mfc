@@ -453,28 +453,41 @@ img{ max-width:100%; display:block; }
 }
 .day-cell{
   aspect-ratio:1/1; border-radius:10px; background:var(--panel);
-  border:1px solid rgba(255,255,255,.05); padding:.4rem;
-  position:relative; display:flex; flex-direction:column;
+  border:1px solid rgba(255,255,255,.05);
+  position:relative; overflow:hidden; /* garde l'image dans les coins arrondis */
 }
 .day-cell--empty{ background:transparent; border:none; }
-.day-cell__num{ font-size:.72rem; color:var(--mist); font-weight:600; }
-.day-cell--match{
-  background:linear-gradient(160deg,#1c3a30,#0d1f19);
-  border-color:rgba(111,227,180,.4);
+.day-cell__num{
+  position:absolute; top:.3rem; left:.4rem; z-index:2;
+  font-size:.72rem; color:var(--mist); font-weight:600;
 }
-.day-cell--match .day-cell__num{ color:var(--accent); font-weight:800; }
-.day-cell__icon{ position:absolute; top:.4rem; right:.4rem; width:16px; height:16px; color:var(--accent); }
-.day-cell__crest{ flex:1; display:flex; align-items:center; justify-content:center; min-height:0; }
-.day-cell__crest img{ width:65%; height:65%; object-fit:contain; display:none; }
+.day-cell--match{ border-color:rgba(111,227,180,.4); }
+.day-cell--match .day-cell__num{
+  color:#fff; background:rgba(0,0,0,.55); padding:.1rem .35rem; border-radius:5px;
+}
+.day-cell__icon{
+  position:absolute; top:.3rem; right:.3rem; z-index:2; width:16px; height:16px; color:var(--accent);
+  background:rgba(0,0,0,.55); border-radius:5px; padding:2px;
+}
+.day-cell__crest{
+  position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+  background:linear-gradient(160deg,#1c3a30,#0d1f19);
+}
+.day-cell__crest img{
+  width:100%; height:100%; object-fit:cover; display:none;
+}
 .day-cell__crest.has-img img{ display:block; }
 .day-cell__crest:not(.has-img)::before{
   content:attr(data-initial); font-family:'Fraunces', serif; font-style:italic; font-weight:700;
-  font-size:1.2rem; color:rgba(111,227,180,.55);
+  font-size:1.6rem; color:rgba(111,227,180,.55);
 }
 .day-cell__opponent{
-  font-size:.56rem; text-align:center; color:var(--white); line-height:1.1; margin-top:.2rem;
+  position:absolute; left:0; right:0; bottom:0; z-index:2;
+  font-size:.56rem; text-align:center; color:#fff; line-height:1.1; padding:.25rem .2rem .3rem;
+  background:linear-gradient(0deg, rgba(0,0,0,.85) 20%, transparent 100%);
   overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
 }
+
 @media (max-width:700px){
   .day-cell__opponent{ display:none; }
   .day-cell__num{ font-size:.62rem; }
