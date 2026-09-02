@@ -3,6 +3,24 @@
    ========================================================= */
 
 document.addEventListener('DOMContentLoaded', () => {
+    /* ---------- 0. INTRO D'OUVERTURE (une fois par session) ---------- */
+  const intro = document.getElementById('intro');
+  if (intro){
+    if (sessionStorage.getItem('mfcIntroShown')){
+      intro.remove();
+      document.body.style.overflow = '';
+    } else {
+      const introSkip = document.getElementById('introSkip');
+      function closeIntro(){
+        intro.classList.add('intro--out');
+        document.body.style.overflow = '';
+        sessionStorage.setItem('mfcIntroShown', '1');
+        setTimeout(() => intro.remove(), 650);
+      }
+      introSkip.addEventListener('click', closeIntro);
+      setTimeout(closeIntro, 2300);
+    }
+  }
 
   /* ---------- 1. MENU LATÉRAL (3 traits) ---------- */
   const burger = document.getElementById('burgerBtn');
@@ -38,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const d = new Date();
       const day = d.getDay(); // 0 = dimanche, 6 = samedi
       let diff = (6 - day + 7) % 7;
-      const target = new Date(d.getFullYear(), d.getMonth(), d.getDate() + diff, 15, 0, 0);
+      const target = new Date(d.getFullYear(), d.getMonth(), d.getDate() + diff, 18, 0, 0);
       if (target <= d) target.setDate(target.getDate() + 7);
       return target;
     }

@@ -13,6 +13,23 @@
 </head>
 <body>
 
+<script>
+  // Empêche le flash de l'intro si elle a déjà été vue dans cette session
+  if (sessionStorage.getItem('mfcIntroShown')) {
+    document.documentElement.classList.add('no-intro');
+  }
+</script>
+
+<div id="intro" aria-hidden="true">
+  <div class="intro__aura"></div>
+  <div class="intro__claws"><span></span><span></span><span></span></div>
+  <div class="intro__content">
+    <img src="assets/logo.jpg" alt="" class="intro__crest">
+    <p class="intro__wordmark">MONTREUIL<br>FOOTBALL CLUB</p>
+  </div>
+  <button id="introSkip" type="button">Passer ›</button>
+</div>
+
 <div id="site">
 
   <!-- ============ BANDE VERTE / HEADER ============ -->
@@ -85,11 +102,11 @@
               <div class="matchcard__countdown" id="countdown">--<small>j</small> --<small>h</small> --<small>m</small></div>
             </div>
             <div class="matchcard__team">
-              <div class="matchcard__team-badge">AS</div>
-              <strong>AS Bagnolet</strong>
+              <div class="matchcard__team-badge">M</div>
+              <strong>LE MEE SPORTS</strong>
             </div>
           </div>
-          <div class="matchcard__meta">Samedi · 15h00 · Stade Marcel-Grosmangin</div>
+          <div class="matchcard__meta">Samedi · 18h00 · Stade Robert Legros</div>
         </div>
       </div>
 
@@ -99,64 +116,126 @@
     <!-- ============ BANDEAU CHIFFRES ============ -->
     <section class="stats">
       <div class="stats__grid">
-        <div class="stat"><span class="stat__num">1935</span><span class="stat__label">Fondation</span></div>
         <div class="stat"><span class="stat__num">90</span><span class="stat__label">Ans d'histoire</span></div>
-        <div class="stat"><span class="stat__num">3</span><span class="stat__label">Équipes</span></div>
-        <div class="stat"><span class="stat__num">450</span><span class="stat__label">Licenciés</span></div>
+        <div class="stat"><span class="stat__num">45</span><span class="stat__label">Éducateurs</span></div>
+        <div class="stat"><span class="stat__num">29</span><span class="stat__label">Équipes</span></div>
+        <div class="stat"><span class="stat__num">+ de 750</span><span class="stat__label">Licenciés</span></div>
       </div>
     </section>
 
     <!-- ============ BANDEAU DÉFILANT ============ -->
     <div class="ticker">
       <div class="ticker__track">
-        <span>RÉGIONALE 2 — GROUPE C</span>
+        <span>RÉGIONALE 1 — GROUPE A</span>
         <span>DERNIER RÉSULTAT : MFC 2–1 US CRÉTEIL</span>
         <span>PROCHAIN MATCH : SAMEDI VS AS BAGNOLET</span>
-        <span>FONDÉ EN 1935</span>
-        <span>STADE MARCEL-GROSMANGIN</span>
-        <span>RÉGIONALE 2 — GROUPE C</span>
+        <span>MONTREUIL SOUS BOIS</span>
+        <span>STADE ROBERT LEGROS</span>
+        <span>RÉGIONALE 1 — GROUPE A</span>
         <span>DERNIER RÉSULTAT : MFC 2–1 US CRÉTEIL</span>
         <span>PROCHAIN MATCH : SAMEDI VS AS BAGNOLET</span>
-        <span>FONDÉ EN 1935</span>
-        <span>STADE MARCEL-GROSMANGIN</span>
+        <span>MONTREUIL SOUS BOIS</span>
+        <span>STADE ROBERT LEGROS</span>
       </div>
     </div>
 
     <!-- ============ ACTUALITÉS (grille asymétrique) ============ -->
     <section class="section" id="actualites">
-      <div class="section__head reveal">
-        <p class="eyebrow"><svg class="claw" viewBox="0 0 24 24"><path d="M2 22 12 2M9 22 17 4M16 22 22 8"/></svg>Actualités</p>
-        <h2>La vie du club</h2>
-      </div>
-      <div class="news-grid">
-        <article class="news-card news-card--feature reveal">
-          <div class="news-card__img news-card__img--1"></div>
-          <div class="news-card__body">
-            <span class="news-card__date">24 août 2026</span>
-            <h3>Victoire à l'arrache face à Créteil</h3>
-            <p>Menés à la pause, les Panthères renversent la rencontre grâce à un doublé en fin de match et confirment leur bon début de saison face à un adversaire coriace.</p>
-          </div>
-        </article>
-        <div class="news-grid__side">
-          <article class="news-card reveal">
-            <div class="news-card__img news-card__img--2"></div>
-            <div class="news-card__body">
-              <span class="news-card__date">18 août 2026</span>
-              <h3>Nouveau maillot domicile dévoilé</h3>
-              <p>La tunique 2026/2027 reprend le vert de la panthère et un col inspiré du blason centenaire.</p>
-            </div>
-          </article>
-          <article class="news-card reveal">
-            <div class="news-card__img news-card__img--3"></div>
-            <div class="news-card__body">
-              <span class="news-card__date">10 août 2026</span>
-              <h3>L'école de foot ouvre ses portes</h3>
-              <p>Inscriptions ouvertes pour les catégories U6 à U13 dès la rentrée de septembre.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
+  <div class="section__head reveal">
+    <p class="eyebrow">
+      <svg class="claw" viewBox="0 0 24 24">
+        <path d="M2 22 12 2M9 22 17 4M16 22 22 8"/>
+      </svg>
+      Actualités
+    </p>
+    <h2>La vie du club</h2>
+  </div>
+
+  <div class="news-grid">
+
+<!-- Article principal -->
+<article class="news-card news-card--feature reveal">
+  <div class="news-card__img">
+    <img src="assets/reprise entrainement .png" alt="Reprise des entraînements">
+  </div>
+
+  <div class="news-card__body">
+    <span class="news-card__date">1 septembre 2026</span>
+    <h3>Reprise des entraînements</h3>
+    <p>
+      La saison débute au Montreuil Football Club.
+      Retrouvez sur l’affiche toutes les informations concernant la reprise
+      de nos différentes catégories.
+      Bonne reprise à toutes et à tous.
+    </p>
+  </div>
+</article>
+
+<!-- Articles secondaires -->
+<div class="news-grid__side">
+
+  <article class="news-card reveal">
+    <div class="news-card__img">
+      <img src="assets/maillot.jpg" alt="Nouveaux maillots du club">
+    </div>
+
+    <div class="news-card__body">
+      <span class="news-card__date">31 août 2026</span>
+      <h3>Seuls les montreuillois peuvent comprendre...</h3>
+      <p>
+        Plus qu’un maillot, c’est l’identité, l’histoire et la fierté de toute une ville.
+
+Découvrez le nouveau maillot de notre équipe fanion pour la saison 2026-2027 !
+
+Une ville, un club, une fierté.
+
+Allez Montreuil !
+      </p>
+    </div>
+  </article>
+
+  <article class="news-card reveal">
+  <div class="news-card__img">
+    <img src="assets/detectionfutsal.png" alt="École de football">
+  </div>
+
+  <div class="news-card__body">
+    <span class="news-card__date">10 août 2026</span>
+    <h3>Détections futsal</h3>
+    <p>Le Montreuil Football Club est heureux d’annoncer la création de sa nouvelle section futsal pour la saison 2026-2027.</p>
+
+<p>Afin de constituer ses premiers effectifs, le club organise des détections pour les catégories Seniors et U18.</p>
+
+<p><strong>Seniors</strong></p>
+
+<p>Les joueurs intéressés sont invités à transmettre leur candidature par courriel à l’adresse suivante :</p>
+
+<p>📧 560296@lpiff.fr</p>
+
+<p>Une convocation sera envoyée par courriel aux profils retenus.</p>
+
+<p><strong>U18</strong></p>
+
+<p>Les joueurs intéressés peuvent s’inscrire auprès d’Abou :</p>
+
+<p>📞 06 51 06 06 67</p>
+
+<p>Une convocation sera ensuite envoyée par SMS.</p>
+
+<p>📍 Gymnase Jean-Jaurès<br>
+1, rue Dombasle<br>
+93100 Montreuil-sous-Bois</p>
+
+<p>L’inscription préalable par courriel ou SMS est obligatoire.</p>
+
+  </div>
+</article>
+
+</div>
+
+  </div>
+</section>
+
 
     <!-- ============ EFFECTIF ============ -->
     <section class="section section--dark" id="effectif">
@@ -212,21 +291,68 @@
 
     <!-- ============ INFOS PRATIQUES ============ -->
     <section class="section" id="pratique">
-      <div class="section__head reveal">
-        <p class="eyebrow"><svg class="claw" viewBox="0 0 24 24"><path d="M2 22 12 2M9 22 17 4M16 22 22 8"/></svg>Infos pratiques</p>
-        <h2>Nous rejoindre</h2>
-      </div>
-      <div class="practical reveal">
-        <div class="practical__card">
-          <h3>Stade Robert Legros</h3>
-          <p>21 Rue des Grands Pêchers, 93100 Montreuil</p>
-          <div class="practical__map">
-            <iframe title="Localisation du stade" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps?q=21 Rue des Grands PêchersMontreuil,France&output=embed"></iframe>
-          </div>
-        </div>
-      </div>
-    </section>
+  <div class="section__head reveal">
+    <p class="eyebrow">
+      <svg class="claw" viewBox="0 0 24 24">
+        <path d="M2 22 12 2M9 22 17 4M16 22 22 8"/>
+      </svg>
+      Infos pratiques
+    </p>
+
+<h2>Nous rejoindre</h2>
+
+  </div>
+
+  <div class="practical reveal">
+
+<!-- Stade Robert Legros -->
+<div class="practical__card">
+  <h3>Stade Robert Legros</h3>
+  <p>21 Rue des Grands Pêchers<br>93100 Montreuil</p>
+
+  <div class="practical__map">
+    <iframe
+      title="Localisation du Stade Robert Legros"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      src="https://www.google.com/maps?q=21 Rue des Grands Pêchers,93100 Montreuil,France&output=embed">
+    </iframe>
+  </div>
+</div>
+
+<!-- Gymnase Jean-Jaurès -->
+<div class="practical__card">
+  <h3>Gymnase Jean-Jaurès</h3>
+  <p>1, rue Dombasle<br>93100 Montreuil-sous-Bois</p>
+
+  <div class="practical__map">
+    <iframe
+      title="Localisation du Gymnase Jean-Jaurès"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      src="https://www.google.com/maps?q=1 Rue Dombasle,93100 Montreuil,France&output=embed">
+    </iframe>
+  </div>
+</div>
+
+<!-- Stade Alice Miliat -->
+<div class="practical__card">
+  <h3>Stade Alice Miliat</h3>
+  <p>21 Rue de l'Acacia<br>93100 Montreuil</p>
+
+  <div class="practical__map">
+    <iframe
+      title="Localisation du Stade Alice Miliat"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      src="https://www.google.com/maps?q=21 Rue de l'Acacia,93100 Montreuil,France&output=embed">
+    </iframe>
+  </div>
+</div>
+
+  </div>
+</section>
+
 
     <!-- ============ PARTENAIRES ============ -->
     <section class="partners">
