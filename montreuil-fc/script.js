@@ -157,10 +157,26 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ---------- 5. LOGOS PARTENAIRES (repli si logo manquant) ---------- */
-  document.querySelectorAll('.partner-logo img').forEach(img => {
+    document.querySelectorAll('.partner-logo img').forEach(img => {
     const box = img.closest('.partner-logo');
-    img.addEventListener('load', () => box.classList.add('has-logo'));
-    img.addEventListener('error', () => box.classList.remove('has-logo'));
+    if (img.complete && img.naturalWidth > 0) {
+      box.classList.add('has-logo');
+    } else {
+      img.addEventListener('load', () => box.classList.add('has-logo'));
+      img.addEventListener('error', () => box.classList.remove('has-logo'));
+    }
+  });
+   
+
+      /* ---------- 5bis. PHOTOS BOUTIQUE (repli si photo manquante) ---------- */
+  document.querySelectorAll('.product__photo img').forEach(img => {
+    const box = img.closest('.product__photo');
+    if (img.complete && img.naturalWidth > 0) {
+      box.classList.add('has-photo');
+    } else {
+      img.addEventListener('load', () => box.classList.add('has-photo'));
+      img.addEventListener('error', () => box.classList.remove('has-photo'));
+    }
   });
 
     /* ---------- 4bis. CALENDRIER DE LA SAISON (sept. 2026 → juin 2027) ---------- */

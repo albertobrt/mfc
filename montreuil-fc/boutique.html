@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Éducateurs — Montreuil Football Club</title>
-<meta name="description" content="Les éducateurs et entraîneurs du Montreuil Football Club.">
+<title>Boutique — Montreuil Football Club</title>
+<meta name="description" content="Les maillots domicile et exterieur du Montreuil Football Club, saison 2026/2027.">
 <link rel="icon" href="assets/logo.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +20,6 @@
       <button class="burger" id="burgerBtn" aria-label="Ouvrir le menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
-
       <a href="index.html" class="topbar__crest">
         <img src="assets/logo.jpg" alt="Blason du Montreuil Football Club">
       </a>
@@ -34,6 +33,7 @@
       <li><a href="effectif.html">Effectif</a></li>
       <li><a href="nos-equipes.html">Nos équipes</a></li>
       <li><a href="calendrier.html">Calendrier</a></li>
+      <li><a href="boutique.html">Boutique</a></li>
       <li>
         <details>
           <summary>Le Club</summary>
@@ -63,22 +63,64 @@
 
   <main>
 
-    <!-- ============ BANNIÈRE DE PAGE ============ -->
     <section class="page-banner">
-      <img class="page-banner__crest" src="=" alt="" aria-hidden="true">
+      <img class="page-banner__crest" src="assets/logo.jpg" alt="" aria-hidden="true">
       <div class="page-banner__inner reveal in">
-        <p class="eyebrow"><svg class="claw" viewBox="0 0 24 24"><path d="M2 22 12 2M9 22 17 4M16 22 22 8"/></svg>Le Club</p>
-        <h1>NOS ÉDUCATEURS</h1>
-        <p class="page-banner__sub">L'encadrement technique qui forme nos Licenciés, des U6 aux séniors.</p>
+        <p class="eyebrow"><svg class="claw" viewBox="0 0 24 24"><path d="M2 22 12 2M9 22 17 4M16 22 22 8"/></svg>Boutique</p>
+        <h1>LES MAILLOTS 2026/2027</h1>
+        <p class="page-banner__sub">Deux tuniques, une seule fierte : celle de porter les couleurs du club.</p>
       </div>
     </section>
 
-    <section class="section">
-      <div class="squad-grid" id="educateursGrid">
-        <!-- généré en JS -->
+    <section class="section section--dark" id="boutique">
+      <div class="boutique-grid reveal">
+
+        <div class="product">
+          <div class="product__gallery">
+            <div class="product__photo product__photo--main">
+              <img src="assets/boutique/mailloth1.jpg" alt="Maillot domicile - vue principale">
+            </div>
+            <div class="product__photo">
+              <img src="assets/boutique/mailloth2.jpg" alt="Maillot domicile - vue 2">
+            </div>
+            <div class="product__photo">
+              <img src="assets/boutique/mailloth3.jpg" alt="Maillot domicile - vue 3">
+            </div>
+          </div>
+                    <div class="product__body">
+            <h3>Maillot Domicile</h3>
+            <p>Noir raye de vert : plus qu'un maillot, l'identite et la fierte de Montreuil. Collection 2026/2027.</p>
+            <div class="product__cta">
+              <p>Précommandez maintenant</p>
+              <a href="https://www.intersportclubidf.com/product/e5706e29-9dc6-4842-bc71-739787130836" class="btn btn--primary" target="_blank" rel="noopener">Précommander le domicile</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="product__gallery">
+            <div class="product__photo product__photo--main">
+              <img src="assets/boutique/maillota1.jpg" alt="Maillot exterieur - vue principale" >
+            </div>
+            <div class="product__photo">
+              <img src="assets/boutique/maillota2.jpg" alt="Maillot exterieur - vue 2" >
+            </div>
+            <div class="product__photo">
+              <img src="assets/boutique/maillota3.jpg" alt="Maillot exterieur - vue 3" >
+            </div>
+          </div>
+                    <div class="product__body">
+            <h3>Maillot Exterieur</h3>
+            <p>Blanc et vert a echarpe, pour jouer loin de Robert Legros sans jamais perdre ses couleurs.</p>
+            <div class="product__cta">
+              <p>Précommandez maintenant</p>
+              <a href="https://www.intersportclubidf.com/product/6d556081-ef17-40bb-87d7-c60b3992771b" class="btn btn--primary" target="_blank" rel="noopener">Précommander l'extérieur</a>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
-
 
   </main>
 
