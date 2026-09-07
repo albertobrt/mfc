@@ -264,6 +264,8 @@ img{ max-width:100%; display:block; }
   gap:1.8rem; 
 }
 
+.news-grid--full .news-card--latest{ order:-1; }
+
 .news-grid__side{ 
   display:flex; 
   flex-direction:column; 

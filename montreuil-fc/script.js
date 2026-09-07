@@ -52,15 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---------- 3. COMPTE À REBOURS PROCHAIN MATCH ---------- */
   const countdownEl = document.getElementById('countdown');
   if (countdownEl){
-    function nextSaturday15h(){
-      const d = new Date();
-      const day = d.getDay(); // 0 = dimanche, 6 = samedi
-      let diff = (6 - day + 7) % 7;
-      const target = new Date(d.getFullYear(), d.getMonth(), d.getDate() + diff, 18, 0, 0);
-      if (target <= d) target.setDate(target.getDate() + 7);
-      return target;
-    }
-    const matchDate = nextSaturday15h();
+    const matchDate = new Date(2026, 8, 13, 15, 0, 0);
 
     function updateCountdown(){
       const now = new Date();
