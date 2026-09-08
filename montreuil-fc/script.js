@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const box = img.closest('.product__photo');
     if (img.complete && img.naturalWidth > 0) {
       box.classList.add('has-photo');
-    } else {
+    }  else {
       img.addEventListener('load', () => box.classList.add('has-photo'));
       img.addEventListener('error', () => box.classList.remove('has-photo'));
     }
@@ -255,13 +255,14 @@ document.addEventListener('DOMContentLoaded', () => {
         crestWrap.className = 'day-cell__crest';
         crestWrap.dataset.initial = match.opponent.charAt(0);
         const img = document.createElement('img');
-        img.src = `assets/opponents/${slugifyOpponent(match.opponent)}.png`;
         img.alt = match.opponent;
-        img.loading = 'lazy';
-        img.addEventListener('load', () => crestWrap.classList.add('has-img'));
+        const showLogo = () => crestWrap.classList.add('has-img');
+        img.addEventListener('load', showLogo);
         img.addEventListener('error', () => crestWrap.classList.remove('has-img'));
         crestWrap.appendChild(img);
         cell.appendChild(crestWrap);
+        img.src = `assets/opponents/${slugifyOpponent(match.opponent)}.png`;
+        if (img.complete && img.naturalWidth > 0) showLogo();
 
         const oppName = document.createElement('div');
         oppName.className = 'day-cell__opponent';

@@ -152,13 +152,12 @@ img{ max-width:100%; display:block; }
   min-height:260px; display:flex; align-items:center; justify-content:center; text-align:center;
   padding:7rem 1.5rem 3.5rem;
   background:
-    radial-gradient(ellipse at 50% -20%, rgba(111,227,180,.22) 0%, transparent 60%),
-    linear-gradient(160deg, var(--panel) 0%, var(--ink) 100%);
+    linear-gradient(rgba(0,0,0,.28), rgba(0,0,0,.28)),
+    url("assets/montreuil ciel.webp") center center / cover no-repeat;
   border-bottom:1px solid rgba(255,255,255,.06);
 }
 .page-banner__crest{
-  position:absolute; top:50%; left:50%; width:70vmin; opacity:.05;
-  transform:translate(-50%,-50%); filter:grayscale(1); pointer-events:none;
+  display:none;
 }
 .page-banner__inner{ position:relative; z-index:1; }
 .page-banner .eyebrow{ justify-content:center; }
@@ -366,6 +365,8 @@ img{ max-width:100%; display:block; }
 .squad-grid .player-photo{ width:100%; height:280px; }
 
 /* =============== NOS ÉQUIPES =============== */
+.team-pole + .team-pole{ margin-top:4rem; }
+.team-pole .section-title{ margin-bottom:1.5rem; }
 .team-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:1.6rem; }
 .team-card{
   background:var(--panel); border:1px solid rgba(255,255,255,.06); border-radius:var(--radius);
