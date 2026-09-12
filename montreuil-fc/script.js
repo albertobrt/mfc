@@ -2,6 +2,42 @@
    MONTREUIL FOOTBALL CLUB — SCRIPT
    ========================================================= */
 
+const pageBanner = document.querySelector('.page-banner');
+const bannerByPage = {
+  actualites: 'page-banner--actualites',
+  calendrier: 'page-banner--calendrier',
+  effectif: 'page-banner--effectif',
+  'nos-equipes': 'page-banner--equipes',
+  'pole-elite': 'page-banner--equipes',
+  'pole-feminines': 'page-banner--equipes',
+  'pole-performance': 'page-banner--equipes',
+  apropos: 'page-banner--stade',
+  boutique: 'page-banner--boutique',
+  contact: 'page-banner--stade',
+  educateurs: 'page-banner--stade',
+  pratique: 'page-banner--club',
+  staff: 'page-banner--stade'
+};
+
+if (pageBanner) {
+  const pageName = window.location.pathname.split('/').pop().replace('.html', '') || 'index';
+  const bannerClass = bannerByPage[pageName];
+  if (bannerClass) pageBanner.classList.add(bannerClass);
+}
+
+const offcanvasNav = document.querySelector('#offcanvas > ul');
+if (offcanvasNav && !offcanvasNav.querySelector('a[href="boutique.html"]')) {
+  const boutiqueItem = document.createElement('li');
+  boutiqueItem.innerHTML = '<a href="boutique.html">Boutique</a>';
+  const clubItem = offcanvasNav.querySelector('details summary');
+  clubItem?.closest('li')?.before(boutiqueItem);
+}
+
+if (!window.location.hash && (window.location.pathname.endsWith('/index.html') || window.location.pathname.endsWith('/'))) {
+  window.history.scrollRestoration = 'manual';
+  window.addEventListener('load', () => window.scrollTo(0, 0));
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     /* ---------- 0. INTRO D'OUVERTURE (une fois par session) ---------- */
   const intro = document.getElementById('intro');
@@ -95,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
     card.className = 'player-card';
     card.innerHTML = `
       <div class="player-photo" data-initial="${person.prenom.charAt(0)}">
-        <img src="assets/players/${slugify(person.prenom)}.jpg" alt="${person.prenom}" loading="lazy">
+        <img src="assets/players/${slugify(person.prenom)}.jpg" alt="${person.prenom}">
         <div class="player-photo__caption">
           <div class="player-card__name">${person.prenom}</div>
           <div class="player-card__pos">${person[roleKey]}</div>

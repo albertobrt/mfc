@@ -11,7 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=Fraunces:ital,wght@0,500;0,600;1,500;1,600&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="top">
 
 <script>
   // Empêche le flash de l'intro si elle a déjà été vue dans cette session
@@ -51,7 +51,11 @@
       <li><a href="index.html">Accueil</a></li>
       <li><a href="actualites.html">Actualités</a></li>
       <li><a href="effectif.html">Effectif</a></li>
-      <li><a href="nos-equipes.html">Nos équipes</a></li>
+      <li><details><summary>Nos équipes</summary><ul>
+        <li><a href="pole-elite.html">Pôle élite</a></li>
+        <li><a href="pole-feminines.html">Pôle féminin</a></li>
+        <li><a href="pole-performance.html">Pôle performance</a></li>
+      </ul></details></li>
       <li><a href="calendrier.html">Calendrier</a></li>
       <li><a href="boutique.html">Boutique</a></li>
       <li>
@@ -81,7 +85,7 @@
   </nav>
   <div class="offcanvas__backdrop" id="offcanvasBackdrop"></div>
 
-  <main id="top">
+  <main>
 
     <!-- ============ HERO ÉDITORIAL (deux colonnes) ============ -->
     <section class="hero" id="hero">
@@ -90,7 +94,7 @@
         <h1>MONTREUIL<br><span>FOOTBALL CLUB</span></h1>
         <p class="hero__tagline">Depuis 1935.</p>
         <div class="hero__actions">
-          <a href="calendrier.html" class="btn btn--primary">Voir le calendrier</a>
+          <a href="boutique.html" class="btn btn--primary">Voir la boutique</a>
           <a href="contact.html" class="btn btn--ghost">Rejoindre le club</a>
         </div>
       </div>
@@ -108,7 +112,7 @@
               <div class="matchcard__countdown" id="countdown">--<small>j</small> --<small>h</small> --<small>m</small></div>
             </div>
             <div class="matchcard__team">
-              <div class="matchcard__team-badge">G</div>
+              <img src="assets/opponents/grigny-football-91.png" alt="Logo de Grigny Football 91">
               <strong>GRIGNY FOOTBALL 91</strong>
             </div>
           </div>
@@ -117,16 +121,6 @@
       </div>
 
       <div class="hero__clawcut" aria-hidden="true"></div>
-    </section>
-
-    <!-- ============ BANDEAU CHIFFRES ============ -->
-    <section class="stats">
-      <div class="stats__grid">
-        <div class="stat"><span class="stat__num">90</span><span class="stat__label">Ans d'histoire</span></div>
-        <div class="stat"><span class="stat__num">45</span><span class="stat__label">Éducateurs</span></div>
-        <div class="stat"><span class="stat__num">29</span><span class="stat__label">Équipes</span></div>
-        <div class="stat"><span class="stat__num">+ de 750</span><span class="stat__label">Licenciés</span></div>
-      </div>
     </section>
 
     <!-- ============ BANDEAU DÉFILANT ============ -->
@@ -162,15 +156,16 @@
 <!-- Article principal -->
 <article class="news-card news-card--feature reveal">
   <div class="news-card__img">
-    <img src="assets/fdmj1.png" alt="Résultat du match Montreuil FC contre Le Mée Sports">
+    <img src="assets/affichecdftour3.png" alt="Affiche du match de Coupe de France entre Grigny et Montreuil FC">
   </div>
 
   <div class="news-card__body">
-    <span class="news-card__date">5 septembre 2026</span>
-    <h3>Un nul pour lancer la saison</h3>
-    <p>Notre équipe fanion partage les points avec Le Mée Sports au terme d’un match disputé.</p>
-    <p><strong>Montreuil FC 2 – 2 Le Mée Sports</strong></p>
-    <p>Merci à nos supporters pour leur présence et leurs encouragements.</p>
+    <span class="news-card__date">13 septembre 2026</span>
+    <h3>La Coupe de France est de retour</h3>
+    <p>La COUPE DE FRANCE est de retour pour le Montreuil Football Club ce week-end !</p>
+    <p>Après un parcours historique jusqu’en 16es de finale la saison dernière, nos joueurs s’apprêtent à écrire une nouvelle page dans cette compétition qui nous a fait vivre tant d’émotions.</p>
+    <p>Pour le compte du 3e tour, nos Montreuillois se déplaceront ce dimanche 13 septembre à 15H00 au PARC DES SPORTS ET LOISIRS de l’U.S GRIGNY avec l’ambition de poursuivre l’aventure !</p>
+    <p>Venez nombreux soutenir nos joueurs pour poursuivre ensemble cette aventure en Coupe de France !</p>
   </div>
 </article>
 
@@ -179,14 +174,15 @@
 
   <article class="news-card reveal">
     <div class="news-card__img">
-      <img src="assets/equipeJ1.png" alt="Équipe fanion du Montreuil Football Club">
+      <img src="assets/afficheu16J1.jpg" alt="Affiche du match U16 Régionale 3 entre Montreuil FC et Espérance Aulnay">
     </div>
 
     <div class="news-card__body">
-      <span class="news-card__date">5 septembre 2026</span>
-      <h3>Notre équipe fanion est prête</h3>
-      <p>Le groupe s’est retrouvé avec ambition pour cette nouvelle saison de Régionale 1.</p>
-      <p>Joueurs et staff portent fièrement les couleurs du Montreuil Football Club.</p>
+      <span class="news-card__date">13 septembre 2026</span>
+      <h3>C’est la rentrée des classes pour nos U16 R3 !</h3>
+      <p>C’est la rentrée des classes pour nos U16 R3 !</p>
+      <p>Promus en U16 RÉGIONALE 3 cette saison, les joueurs de Djibril Bathily disputeront leur premier match à domicile face à l’ESPÉRANCE AULNAYSIENNE, à 13h00 au STADE ROBERT LEGROS !</p>
+      <p>Venez nombreux les encourager pour leurs premiers pas en U16 R3 !</p>
     </div>
   </article>
 
@@ -344,7 +340,6 @@
   <div class="practical__map">
     <iframe
       title="Localisation du Stade Robert Legros"
-      loading="lazy"
       referrerpolicy="no-referrer-when-downgrade"
       src="https://www.google.com/maps?q=21 Rue des Grands Pêchers,93100 Montreuil,France&output=embed">
     </iframe>
@@ -359,7 +354,6 @@
   <div class="practical__map">
     <iframe
       title="Localisation du Gymnase Jean-Jaurès"
-      loading="lazy"
       referrerpolicy="no-referrer-when-downgrade"
       src="https://www.google.com/maps?q=1 Rue Dombasle,93100 Montreuil,France&output=embed">
     </iframe>
@@ -374,7 +368,6 @@
   <div class="practical__map">
     <iframe
       title="Localisation du Stade Alice Miliat"
-      loading="lazy"
       referrerpolicy="no-referrer-when-downgrade"
       src="https://www.google.com/maps?q=21 Rue de l'Acacia,93100 Montreuil,France&output=embed">
     </iframe>
@@ -389,7 +382,6 @@
   <div class="practical__map">
     <iframe
       title="Localisation du Terrain de Sport Romain Rolland"
-      loading="lazy"
       referrerpolicy="no-referrer-when-downgrade"
       src="https://www.google.com/maps?q=28 Rue Charles Delavacquerie,93100 Montreuil,France&output=embed">
     </iframe>

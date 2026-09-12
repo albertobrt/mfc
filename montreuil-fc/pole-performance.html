@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pôle performance — Montreuil Football Club</title>
+<meta name="description" content="Organigramme du pôle de performance du Montreuil Football Club.">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=Fraunces:ital,wght@0,500;0,600;1,500;1,600&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="site">
+  <header class="topbar">
+    <div class="topbar__inner">
+      <button class="burger" id="burgerBtn" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="topbar__crest"><img src="assets/logo.png" alt="Blason du Montreuil Football Club"></a>
+    </div>
+  </header>
+
+  <nav class="offcanvas" id="offcanvas">
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="actualites.html">Actualités</a></li>
+      <li><a href="effectif.html">Effectif</a></li>
+      <li><details open><summary>Nos équipes</summary><ul>
+        <li><a href="pole-elite.html">Pôle élite</a></li>
+        <li><a href="pole-feminines.html">Pôle féminin</a></li>
+        <li><a href="pole-performance.html">Pôle performance</a></li>
+      </ul></details></li>
+      <li><a href="calendrier.html">Calendrier</a></li>
+      <li><a href="boutique.html">Boutique</a></li>
+      <li><details><summary>Le Club</summary><ul>
+        <li><a href="educateurs.html">Éducateurs</a></li>
+        <li><a href="staff.html">Staff administratif</a></li>
+        <li><a href="apropos.html">À propos de nous</a></li>
+      </ul></details></li>
+      <li><a href="pratique.html">Infos pratiques</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="offcanvas__socials">
+      <a href="https://www.facebook.com/foot93100/?locale=fr_FR" aria-label="Facebook" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://www.instagram.com/montreuilfootballclub/" aria-label="Instagram" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.tiktok.com/@montreuilfootballclub" aria-label="TikTok" target="_blank" rel="noopener">TikTok</a>
+    </div>
+  </nav>
+  <div class="offcanvas__backdrop" id="offcanvasBackdrop"></div>
+
+  <main>
+    <section class="page-banner">
+      <img class="page-banner__crest" src="" alt="" aria-hidden="true">
+      <div class="page-banner__inner reveal in">
+        <p class="eyebrow"><svg class="claw" viewBox="0 0 24 24"><path d="M2 22 12 2M9 22 17 4M16 22 22 8"/></svg>Nos équipes</p>
+        <h1>PÔLE PERFORMANCE</h1>
+        <p class="page-banner__sub">L'organisation de l'école de foot et du pôle de performance.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="org-chart reveal">
+        <div class="org-chart__top">
+          <div class="org-node org-node--lead">
+            <span class="org-node__role">Responsable école de foot</span>
+            <strong>Mahamet</strong>
+          </div>
+        </div>
+
+        <div class="org-chart__groups">
+          <section class="org-group">
+            <h2>Coordination</h2>
+            <div class="org-group__nodes">
+              <div class="org-node"><span class="org-node__role">Coordinateur sportif</span><strong>Bruno</strong></div>
+            </div>
+          </section>
+          <section class="org-group">
+            <h2>U8</h2>
+            <div class="org-group__nodes"><div class="org-node"><span class="org-node__role">Encadrement</span><strong>Tambo / Claudel</strong></div></div>
+          </section>
+          <section class="org-group">
+            <h2>U9</h2>
+            <div class="org-group__nodes"><div class="org-node"><span class="org-node__role">Encadrement</span><strong>Alberto</strong></div></div>
+          </section>
+          <section class="org-group">
+            <h2>U10</h2>
+            <div class="org-group__nodes"><div class="org-node"><span class="org-node__role">Encadrement</span><strong>Djedy / Quentin</strong></div></div>
+          </section>
+          <section class="org-group">
+            <h2>U11</h2>
+            <div class="org-group__nodes"><div class="org-node"><span class="org-node__role">Encadrement</span><strong>Omarou / Mahamet</strong></div></div>
+          </section>
+          <section class="org-group">
+            <h2>U12</h2>
+            <div class="org-group__nodes"><div class="org-node"><span class="org-node__role">Encadrement</span><strong>Nathane / Tambo</strong></div></div>
+          </section>
+          <section class="org-group">
+            <h2>U13</h2>
+            <div class="org-group__nodes"><div class="org-node"><span class="org-node__role">Encadrement</span><strong>Claudel / Kleyton</strong></div></div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact-footer">
+    <div class="footer__grid">
+      <div class="footer__brand"><img src="assets/logo.png" alt="Blason du Montreuil Football Club"><p>Montreuil Football Club<br>Fondé en 1935</p></div>
+      <div class="footer__col"><h4>Club</h4><a href="histoire.html">Histoire</a><a href="effectif.html">Effectif</a><a href="pratique.html">Infos pratiques</a></div>
+      <div class="footer__col"><h4>Contact</h4><a href="mailto:560296@lpiff.fr">560296@lpiff.fr</a><a href="tel:+330869777671">0 869 77 76 71</a><span>21 Rue des Grands Pêchers, 93100 Montreuil</span></div>
+    </div>
+    <div class="footer__bottom"><span>© 2026 Montreuil Football Club — Tous droits réservés</span></div>
+  </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
