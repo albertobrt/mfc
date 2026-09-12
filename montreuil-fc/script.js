@@ -334,15 +334,4 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.15 });
   revealEls.forEach(el => io.observe(el));
 
-  /* ---------- 7. FORMULAIRE NEWSLETTER (démo, sans backend) ---------- */
-  const form = document.getElementById('newsletterForm');
-  if (form){
-    const msg = document.getElementById('newsletterMsg');
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      msg.textContent = 'Merci, vous êtes inscrit ! 🐾';
-      form.reset();
-    });
-  }
-
 });
