@@ -104,22 +104,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------- 4. EFFECTIF — DONNÉES + RENDU ---------- */
   const squad = [
-    { prenom:'Enzo',     poste:'Gardien'   },
-    { prenom:'Yanis',    poste:'Défenseur' },
-    { prenom:'Mohamed',  poste:'Défenseur' },
-    { prenom:'Lucas',    poste:'Défenseur' },
-    { prenom:'Rayan',    poste:'Défenseur' },
-    { prenom:'Hugo',     poste:'Défenseur' },
-    { prenom:'Nathan',   poste:'Milieu'    },
-    { prenom:'Ibrahim',  poste:'Milieu'    },
-    { prenom:'Baptiste', poste:'Milieu'    },
-    { prenom:'Sofiane',  poste:'Milieu'    },
-    { prenom:'Amine',    poste:'Milieu'    },
-    { prenom:'Tom',      poste:'Attaquant' },
-    { prenom:'Adam',     poste:'Attaquant' },
-    { prenom:'Kylian',   poste:'Attaquant' },
-    { prenom:'Noah',     poste:'Attaquant' },
-    { prenom:'Théo',     poste:'Gardien'   },
+    { prenom:'Anthony Adel',       photo:'Anthony-Adel.jpg',       poste:'Milieu'    },
+    { prenom:'Dialla Danfakha',    photo:'Dialla-DANFAKHA.jpg',    poste:'Milieu'    },
+    { prenom:'Fousseny Diabate',   photo:'Fousseny-DIABATE.jpg',   poste:'Attaquant' },
+    { prenom:'Kalvin Guede',       photo:'Kalvin-GUEDE.jpg',       poste:'Défenseur' },
+    { prenom:'Mahamadou Sissoko',  photo:'Mahamadou-SISSOKO.jpg',  poste:'Défenseur' },
+    { prenom:'Mamoudou Sow',       photo:'Mamoudou-SOW.jpg',       poste:'Défenseur' },
+    { prenom:'Matala Coulibaly',   photo:'Matala-COULIBALY.jpg',   poste:'Défenseur' },
+    { prenom:'Mehdi Khaouad',      photo:'Mehdi-KHAOUAD.jpg',      poste:'Défenseur' },
+    { prenom:'Mohand Lounici',     photo:'Mohand-Lounici.jpg',     poste:'Attaquant' },
+    { prenom:'Mouhamed Sangare',   photo:'Mouhamed-SANGARE.jpg',   poste:'Milieu'    },
+    { prenom:'Oumar Sissoko',      photo:'Oumar-SISSOKO.jpg',      poste:'Gardien'   },
+    { prenom:'Rohan Sadala Alain', photo:'Rohan-SADALA-ALAIN.jpg', poste:'Milieu'    },
+    { prenom:'Romann Mivekannin',  photo:'Romann-MIVEKANNIN.jpg',  poste:'À définir' },
+    { prenom:'Saloum Soumare',     photo:'Saloum-SOUMARE.jpg',     poste:'Attaquant' },
+    { prenom:'Yoann-Axel Nkouka',  photo:'Yoann-Axel-NKOUKA.jpg',  poste:'Défenseur' },
   ];
 
   function slugify(str){
@@ -131,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
     card.className = 'player-card';
     card.innerHTML = `
       <div class="player-photo" data-initial="${person.prenom.charAt(0)}">
-        <img src="assets/players/${slugify(person.prenom)}.jpg" alt="${person.prenom}">
+        <img src="assets/players/${person.photo}" alt="Photo de ${person.prenom}, joueur du Montreuil Football Club">
         <div class="player-photo__caption">
           <div class="player-card__name">${person.prenom}</div>
           <div class="player-card__pos">${person[roleKey]}</div>

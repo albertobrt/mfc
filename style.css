@@ -528,6 +528,76 @@ img{ max-width:100%; display:block; }
 .museum-sources .eyebrow{ justify-content:center; }
 .museum-sources > div{ display:flex; flex-wrap:wrap; justify-content:center; gap:.8rem 1.3rem; }
 .museum-sources span{ width:auto; }
+/* =============== PAGE MONTREUIL FOOTBALL CLUB =============== */
+.club-opening{ max-width:var(--maxw); display:grid; grid-template-columns:minmax(0,1.35fr) minmax(280px,.65fr); gap:3rem; align-items:end; }
+.club-opening__lead{ max-width:760px; }
+.club-opening h2,.club-section-heading h2,.club-territory h2,.club-closing h2{ margin:0 0 1.2rem; color:var(--white); font-size:clamp(2.4rem,5vw,5rem); }
+.club-opening__lead > p:not(.eyebrow),.club-territory__copy > p:not(.eyebrow),.club-closing > p:not(.eyebrow){ max-width:62ch; font-size:1.05rem; }
+.club-opening__quote{ padding:2rem; border:1px solid rgba(111,227,180,.3); background:linear-gradient(145deg,rgba(29,74,62,.85),rgba(11,15,13,.9)); box-shadow:12px 12px 0 rgba(29,74,62,.25); }
+.club-opening__quote span{ display:block; margin-bottom:1.2rem; color:var(--accent); font-size:.72rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; }
+.club-opening__quote strong{ display:block; color:var(--white); font-family:'Fraunces',serif; font-size:1.55rem; line-height:1.35; }
+.club-opening__quote small{ display:block; margin-top:1.4rem; color:var(--mist); font-size:.76rem; letter-spacing:1.5px; text-transform:uppercase; }
+.club-stats{ max-width:var(--maxw); display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:1px; padding-top:0; padding-bottom:0; background:rgba(111,227,180,.2); }
+.club-stats__item{ min-height:170px; display:flex; flex-direction:column; justify-content:center; padding:1.5rem; background:var(--ink); }
+.club-stats__item strong{ color:var(--accent); font-family:'Big Shoulders Display',sans-serif; font-size:clamp(2.8rem,5vw,5rem); line-height:.85; }
+.club-stats__item span{ max-width:16ch; margin-top:1rem; color:var(--mist); font-size:.83rem; line-height:1.4; }
+.club-section-heading{ max-width:760px; margin-bottom:2rem; }
+.club-territory{ max-width:var(--maxw); display:grid; grid-template-columns:.8fr 1.2fr; gap:4rem; align-items:center; }
+.club-territory__visual{ min-height:330px; display:flex; flex-direction:column; align-items:center; justify-content:center; border:1px solid rgba(111,227,180,.25); background:radial-gradient(circle at center,rgba(76,148,132,.32),transparent 64%),var(--panel); }
+.club-territory__visual span{ color:var(--accent); font-family:'Big Shoulders Display',sans-serif; font-size:clamp(7rem,15vw,13rem); font-weight:900; line-height:.7; }
+.club-territory__visual p{ margin-top:2rem; color:var(--white); font-size:.78rem; font-weight:700; letter-spacing:3px; text-transform:uppercase; }
+.club-territory__copy h2{ font-size:clamp(2.2rem,4vw,4rem); }
+.club-territory__copy{ display:grid; gap:1rem; }
+.club-values{ max-width:none; padding-left:max(1.5rem,calc((100% - var(--maxw)) / 2)); padding-right:max(1.5rem,calc((100% - var(--maxw)) / 2)); background:linear-gradient(135deg,rgba(19,25,22,.96),rgba(29,74,62,.38)); border-top:1px solid rgba(111,227,180,.1); border-bottom:1px solid rgba(111,227,180,.1); }
+.club-values__grid{ display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:1rem; }
+.club-value{ min-height:220px; padding:1.5rem; border:1px solid rgba(111,227,180,.18); background:var(--panel); transition:transform .25s var(--ease),border-color .25s ease; }
+.club-value:hover{ transform:translateY(-5px); border-color:rgba(111,227,180,.55); }
+.club-value strong{ display:block; margin-bottom:3.5rem; color:var(--accent); font-family:'Fraunces',serif; font-size:.82rem; }
+.club-value h3{ margin-bottom:.65rem; color:var(--white); font-size:1.5rem; }
+.club-value p{ font-size:.92rem; }
+.club-closing{ max-width:var(--maxw); padding-top:5rem; padding-bottom:5rem; text-align:center; background:linear-gradient(145deg,var(--panel),rgba(29,74,62,.55)); border-top:1px solid rgba(111,227,180,.25); border-bottom:1px solid rgba(111,227,180,.25); }
+.club-closing .eyebrow{ justify-content:center; }
+.club-closing h2{ max-width:850px; margin-left:auto; margin-right:auto; }
+.club-closing > p:last-child{ max-width:55ch; margin:0 auto; }
+
+/* =============== PROJET DU CLUB =============== */
+.project-intro{ max-width:var(--maxw); display:grid; grid-template-columns:minmax(0,1.25fr) minmax(280px,.75fr); gap:3rem; align-items:end; }
+.project-intro__content{ max-width:760px; }
+.project-intro h2,.project-section__heading h2{ margin:0 0 1.2rem; font-size:clamp(2.2rem,4.5vw,4.4rem); }
+.project-intro__content > p:not(.eyebrow),.project-section__heading > p:not(.eyebrow){ max-width:65ch; font-size:1.05rem; }
+.project-intro__statement{ padding:1.6rem; border-left:3px solid var(--accent); background:linear-gradient(135deg,rgba(29,74,62,.7),rgba(19,25,22,.8)); }
+.project-intro__statement span{ display:block; margin-bottom:.8rem; color:var(--accent); font-size:.72rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; }
+.project-intro__statement strong{ display:block; color:var(--white); font-family:'Fraunces',serif; font-size:1.25rem; line-height:1.4; }
+.project-section{ max-width:var(--maxw); }
+.project-section--dark,.project-pillars{ max-width:none; padding-left:max(1.5rem,calc((100% - var(--maxw)) / 2)); padding-right:max(1.5rem,calc((100% - var(--maxw)) / 2)); background:linear-gradient(135deg,rgba(19,25,22,.96),rgba(29,74,62,.38)); border-top:1px solid rgba(111,227,180,.1); border-bottom:1px solid rgba(111,227,180,.1); }
+.project-section__heading{ max-width:780px; margin-bottom:2.5rem; }
+.project-card-grid{ display:grid; gap:1rem; }
+.project-card-grid--four{ grid-template-columns:repeat(4,minmax(0,1fr)); }
+.project-card-grid--three{ grid-template-columns:repeat(3,minmax(0,1fr)); }
+.project-card{ min-height:190px; padding:1.6rem; background:var(--panel); border:1px solid rgba(111,227,180,.13); border-radius:var(--radius); transition:transform .25s var(--ease),border-color .25s ease,background .25s ease; }
+.project-card:hover,.project-axis:hover,.pillar:hover{ transform:translateY(-5px); border-color:rgba(111,227,180,.55); }
+.project-card__number{ display:block; margin-bottom:2.8rem; color:var(--accent); font-family:'Fraunces',serif; font-size:.85rem; }
+.project-card h3,.project-axis h3{ margin-bottom:.7rem; color:var(--white); font-size:1.45rem; }
+.project-card p,.project-axis p,.pillar p{ font-size:.94rem; }
+.project-card--value{ min-height:165px; border-top:2px solid var(--accent); }
+.project-card--value h3{ color:var(--accent); }
+.project-axis-grid{ display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:1rem; }
+.project-axis{ min-height:255px; padding:1.6rem; border:1px solid rgba(111,227,180,.18); border-radius:var(--radius); background:linear-gradient(160deg,rgba(29,74,62,.64),rgba(19,25,22,.92)); transition:transform .25s var(--ease),border-color .25s ease; }
+.project-axis > span{ display:block; margin-bottom:4rem; color:var(--accent); font-size:.72rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; }
+.project-pillars{ background:var(--panel); }
+.pillar-grid{ display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:1rem; }
+.pillar{ min-height:220px; display:flex; flex-direction:column; justify-content:space-between; padding:1.6rem; border:1px solid rgba(111,227,180,.18); border-radius:var(--radius); background:var(--ink); transition:transform .25s var(--ease),border-color .25s ease; }
+.pillar strong{ color:var(--white); font-family:'Big Shoulders Display',sans-serif; font-size:clamp(1.8rem,3vw,3rem); letter-spacing:1px; }
+.project-feature-grid{ max-width:var(--maxw); margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:center; }
+.project-feature-grid--reverse .project-section__heading{ order:2; }
+.project-feature__copy{ display:grid; gap:1rem; }
+.project-feature__copy p{ font-size:1.05rem; }
+.roadmap{ position:relative; display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:2.5rem 1rem; }
+.roadmap__line{ position:absolute; top:1.1rem; left:0; right:0; height:1px; background:rgba(111,227,180,.35); }
+.roadmap__item{ position:relative; padding-top:2.5rem; }
+.roadmap__item::before{ content:''; position:absolute; top:.7rem; left:0; width:12px; height:12px; border:3px solid var(--ink); border-radius:50%; background:var(--accent); box-shadow:0 0 0 1px var(--accent); }
+.roadmap__item span{ display:block; margin-bottom:.55rem; color:var(--accent); font-family:'Big Shoulders Display',sans-serif; font-size:1.45rem; letter-spacing:1px; text-transform:uppercase; }
+.roadmap__item p{ font-size:.92rem; }
 
 /* =============== CALENDRIER =============== */
 .fixtures{ display:flex; flex-direction:column; gap:.9rem; }
@@ -651,6 +721,16 @@ filter:grayscale(.3) invert(.92) contrast(.9);
   .org-chart__groups::before{ left:25%; right:25%; }
   .museum-intro{ grid-template-columns:1fr; gap:2.5rem; }
   .museum-photo--intro{ max-width:560px; margin:0 auto; }
+  .project-intro{ grid-template-columns:1fr; gap:2rem; }
+  .project-card-grid--four,.project-axis-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .pillar-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .project-feature-grid{ gap:2.5rem; }
+  .roadmap{ grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .roadmap__line{ display:none; }
+  .club-opening{ grid-template-columns:1fr; gap:2rem; }
+  .club-stats{ grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .club-territory{ grid-template-columns:1fr; gap:2rem; }
+  .club-values__grid{ grid-template-columns:repeat(2,minmax(0,1fr)); }
 }
 @media (max-width:560px){
   .footer__grid{ grid-template-columns:1fr; }
@@ -669,6 +749,17 @@ filter:grayscale(.3) invert(.92) contrast(.9);
   .museum-gallery,.museum-gallery--left,.museum-gallery--right{ width:100%; margin:1rem 0 2rem 1rem; transform:none; flex-direction:column; max-width:calc(100% - 1rem); }
   .museum-gallery .museum-photo:nth-child(2){ margin-top:0; }
   .museum-photo--intro img{ min-height:250px; }
+  .project-section--dark,.project-pillars{ padding-left:1rem; padding-right:1rem; }
+  .project-card-grid--four,.project-card-grid--three,.project-axis-grid,.pillar-grid,.project-feature-grid,.roadmap{ grid-template-columns:1fr; }
+  .project-feature-grid--reverse .project-section__heading{ order:0; }
+  .project-card__number,.project-axis > span{ margin-bottom:1.6rem; }
+  .club-values,.club-closing{ padding-left:1rem; padding-right:1rem; }
+  .club-stats{ grid-template-columns:1fr 1fr; }
+  .club-stats__item{ min-height:140px; padding:1rem; }
+  .club-values__grid{ grid-template-columns:1fr; }
+  .club-value{ min-height:175px; }
+  .club-value strong{ margin-bottom:2rem; }
+  .club-territory__visual{ min-height:250px; }
 }
 
 /* =============== CALENDRIER SAISON (mois par mois) =============== */
