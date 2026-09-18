@@ -159,6 +159,12 @@ img{ max-width:100%; display:block; }
 .page-banner__crest{
   display:none;
 }
+.page-banner--pole{
+  background-image:linear-gradient(rgba(0,0,0,.28), rgba(0,0,0,.28)), url("assets/pole elite.jpg");
+}
+.page-banner--avenir{
+  background-image:linear-gradient(rgba(0,0,0,.28), rgba(0,0,0,.28)), url("assets/ecoledefoot.png");
+}
 .page-banner__inner{ position:relative; z-index:1; }
 .page-banner .eyebrow{ justify-content:center; }
 .page-banner h1{ font-size:clamp(2.1rem,5vw,3.4rem); color:var(--white); }
@@ -170,6 +176,9 @@ img{ max-width:100%; display:block; }
 .page-banner--equipes{
   background-image:linear-gradient(rgba(0,0,0,.32), rgba(0,0,0,.32)), url("assets/ecoledefoot.png");
 }
+.page-banner--feminines{
+  background-image:linear-gradient(rgba(0,0,0,.32), rgba(0,0,0,.32)), url("assets/pole-feminine.png");
+}
 .page-banner--effectif{
   background-image:linear-gradient(rgba(0,0,0,.32), rgba(0,0,0,.32)), url("assets/remerciement.png");
 }
@@ -180,8 +189,10 @@ img{ max-width:100%; display:block; }
   background-image:linear-gradient(rgba(0,0,0,.32), rgba(0,0,0,.32)), url("assets/remerciement.png");
 }
 .page-banner--boutique{
-  background-image:none;
-  background-color:var(--panel);
+  background-image:linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.25)), url("assets/boutiques.png");
+  background-position:center center;
+  background-size:cover;
+  background-repeat:no-repeat;
 }
 .page-banner--stade{
   background-image:linear-gradient(rgba(0,0,0,.32), rgba(0,0,0,.32)), url("assets/stade.webp");
@@ -627,6 +638,10 @@ img{ max-width:100%; display:block; }
 display:grid;
 grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
 gap:1.8rem;
+}
+
+.practical--schedule{
+margin-bottom:1.8rem;
 }
 
 .practical__card{

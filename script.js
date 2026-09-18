@@ -170,15 +170,19 @@ document.addEventListener('DOMContentLoaded', () => {
     educateurs.forEach(p => educGrid.appendChild(buildCard(p, 'poste')));
   }
 
-  // Staff administratif (page Staff)
+  // Comité directeur (page Staff)
   const staffGrid = document.getElementById('staffGrid');
   if (staffGrid){
     const staff = [
-      { prenom:'Philippe', poste:'Président'                 },
-      { prenom:'Isabelle', poste:'Secrétaire générale'       },
-      { prenom:'Ahmed',    poste:'Trésorier'                 },
-      { prenom:'Claire',   poste:'Responsable communication' },
-      { prenom:'Bruno',    poste:'Responsable technique'     },
+      { prenom:'Abdoulaye Sow',           poste:'Président'                     },
+      { prenom:'Abdessamad Cherfouni',    poste:"Vice-président d'honneur"     },
+      { prenom:'Mathieu Gomis',           poste:'Vice-président'                },
+      { prenom:'Marc Guenzi',             poste:'Secrétaire général'            },
+      { prenom:'Mara Djikine',            poste:'Secrétaire adjoint'             },
+      { prenom:'Aimé Crepin',             poste:'Trésorier'                     },
+      { prenom:'Demba Sissoko',           poste:'Responsable communication'     },
+      { prenom:'Gilberto da Graça',       poste:'Responsable technique'         },
+      { prenom:'Laura Guenzi',            poste:'Membre'                        },
     ];
     staff.forEach(p => staffGrid.appendChild(buildCard(p, 'poste')));
   }
