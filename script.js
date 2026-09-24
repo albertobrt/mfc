@@ -116,9 +116,12 @@ document.addEventListener('DOMContentLoaded', () => {
     { prenom:'Mouhamed Sangare',   photo:'Mouhamed-SANGARE.jpg',   poste:'Milieu'    },
     { prenom:'Oumar Sissoko',      photo:'Oumar-SISSOKO.jpg',      poste:'Gardien'   },
     { prenom:'Rohan Sadala Alain', photo:'Rohan-SADALA-ALAIN.jpg', poste:'Milieu'    },
-    { prenom:'Romann Mivekannin',  photo:'Romann-MIVEKANNIN.jpg',  poste:'À définir' },
+    { prenom:'Romann Mivekannin',  photo:'Romann-MIVEKANNIN.jpg',  poste:'Attaquant' },
     { prenom:'Saloum Soumare',     photo:'Saloum-SOUMARE.jpg',     poste:'Attaquant' },
-    { prenom:'Yoann-Axel Nkouka',  photo:'Yoann-Axel-NKOUKA.jpg',  poste:'Défenseur' },   
+    { prenom:'Yoann-Axel Nkouka',  photo:'Yoann-Axel-NKOUKA.jpg',  poste:'Défenseur' },
+    { prenom:'Manou DJAMBOU',  photo:'Manou-DJAMBOU.jpg',  poste:'Défenseur' }, 
+    { prenom:'Joram ADETOYE',  photo:'Joram-ADETOYE.jpg',  poste:'Défenseur' },
+    { prenom:'Jude Armel MBEN MBOM',  photo:'Jude-Armel-MBEN-MBOM.jpg',  poste:'Milieu' },
   ];
 
   function slugify(str){
