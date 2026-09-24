@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---------- 3. COMPTE À REBOURS PROCHAIN MATCH ---------- */
   const countdownEl = document.getElementById('countdown');
   if (countdownEl){
-    const matchDate = new Date(2026, 8, 19, 18, 0, 0);
+    const matchDate = new Date(2026, 8, 27, 14, 30, 0);
 
     function updateCountdown(){
       const now = new Date();
@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
     { prenom:'Rohan Sadala Alain', photo:'Rohan-SADALA-ALAIN.jpg', poste:'Milieu'    },
     { prenom:'Romann Mivekannin',  photo:'Romann-MIVEKANNIN.jpg',  poste:'À définir' },
     { prenom:'Saloum Soumare',     photo:'Saloum-SOUMARE.jpg',     poste:'Attaquant' },
-    { prenom:'Yoann-Axel Nkouka',  photo:'Yoann-Axel-NKOUKA.jpg',  poste:'Défenseur' },
+    { prenom:'Yoann-Axel Nkouka',  photo:'Yoann-Axel-NKOUKA.jpg',  poste:'Défenseur' },   
   ];
 
   function slugify(str){
@@ -215,6 +215,7 @@ document.addEventListener('DOMContentLoaded', () => {
     { date:'2026-09-05', opponent:'Le Mée Sports',          home:true  },
     { date:'2026-09-13', opponent:'Grigny Football 91',     home:false },
     { date:'2026-09-19', opponent:'Mantois 78 FC',          home:false },
+    { date:'2026-09-27', opponent:'Chevilly Larue Elan',   home:false  },
     { date:'2026-10-03', opponent:'FC 93 Bobigny',          home:true  },
     { date:'2026-10-17', opponent:'St Brice F.C.',          home:false },
     { date:'2026-10-31', opponent:'Aulnaysienne ESP',       home:true  },
