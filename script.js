@@ -342,3 +342,13 @@ document.addEventListener('DOMContentLoaded', () => {
   revealEls.forEach(el => io.observe(el));
 
 });
+  /* ---------- WEEKEND (repli si affiche manquante) ---------- */
+  document.querySelectorAll('.weekend-photo img').forEach(img => {
+    const box = img.closest('.weekend-photo');
+    if (img.complete && img.naturalWidth > 0) {
+      box.classList.add('has-photo');
+    } else {
+      img.addEventListener('load', () => box.classList.add('has-photo'));
+      img.addEventListener('error', () => box.classList.remove('has-photo'));
+    }
+  });
