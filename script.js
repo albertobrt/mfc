@@ -120,7 +120,6 @@ document.addEventListener('DOMContentLoaded', () => {
     { prenom:'Saloum Soumare',     photo:'Saloum-SOUMARE.jpg',     poste:'Attaquant' },
     { prenom:'Yoann-Axel Nkouka',  photo:'Yoann-Axel-NKOUKA.jpg',  poste:'Défenseur' },
     { prenom:'Manou DJAMBOU',  photo:'Manou-DJAMBOU.jpg',  poste:'Défenseur' }, 
-    { prenom:'Joram ADETOYE',  photo:'Joram-ADETOYE.jpg',  poste:'Défenseur' },
     { prenom:'Jude Armel MBEN MBOM',  photo:'Jude-Armel-MBEN-MBOM.jpg',  poste:'Milieu' },
   ];
 
