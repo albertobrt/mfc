@@ -1,0 +1,175 @@
+/* =========================================================
+   MONTREUIL FC — PÔLE FÉMININ
+   Couleur : #DB3093
+   Ce fichier concerne uniquement pole-feminines.html
+   ========================================================= */
+
+.page-feminines {
+  --green: #DB3093;
+  --green-deep: #A51F6E;
+  --accent: #DB3093;
+}
+
+
+/* ===============================
+   HEADER
+   =============================== */
+
+.page-feminines .topbar {
+  background: linear-gradient(
+    180deg,
+    #DB3093 0%,
+    #C62882 100%
+  );
+}
+
+
+/* ===============================
+   MENU LATÉRAL
+   =============================== */
+
+.page-feminines .offcanvas a:hover,
+.page-feminines .offcanvas a.active,
+.page-feminines .offcanvas summary:hover,
+.page-feminines .offcanvas details a:hover {
+  color: #DB3093;
+}
+
+.page-feminines .offcanvas summary::after {
+  color: #DB3093;
+}
+
+.page-feminines .offcanvas__socials a:hover {
+  border-color: #DB3093;
+  color: #DB3093;
+}
+
+
+/* ===============================
+   BANNIÈRE PÔLE FÉMININ
+   =============================== */
+
+.page-feminines .page-banner--feminines .eyebrow {
+  color: #DB3093;
+}
+
+.page-feminines .page-banner--feminines .claw {
+  color: #DB3093;
+}
+
+
+/* ===============================
+   ORGANIGRAMME
+   =============================== */
+
+.page-feminines .org-chart__top::after {
+  background: rgba(219, 48, 147, .45);
+}
+
+.page-feminines .org-chart__groups::before {
+  background: rgba(219, 48, 147, .45);
+}
+
+.page-feminines .org-group::before {
+  background: rgba(219, 48, 147, .45);
+}
+
+.page-feminines .org-group h2 {
+  color: #DB3093;
+}
+
+.page-feminines .org-node {
+  background:
+    linear-gradient(
+      145deg,
+      rgba(219, 48, 147, .30),
+      var(--panel)
+    );
+
+  border-color: rgba(219, 48, 147, .25);
+}
+
+.page-feminines .org-node--lead {
+  background:
+    linear-gradient(
+      145deg,
+      rgba(219, 48, 147, .35),
+      var(--panel)
+    );
+
+  border-color: rgba(219, 48, 147, .50);
+}
+
+
+/* ===============================
+   AUTRES ACCENTS DE LA PAGE
+   =============================== */
+
+.page-feminines .eyebrow {
+  color: #DB3093;
+}
+
+.page-feminines .player-card__pos {
+  color: #DB3093;
+}
+
+.page-feminines .value-card h3 {
+  color: #DB3093;
+}
+
+.page-feminines .contact-card a:hover {
+  color: #DB3093;
+}
+
+
+/* ===============================
+   BOUTONS
+   =============================== */
+
+.page-feminines .btn--primary {
+  background: #DB3093;
+}
+
+.page-feminines .btn--primary:hover {
+  background: #EE55A9;
+}
+
+.page-feminines .btn--ghost:hover {
+  border-color: #DB3093;
+  color: #DB3093;
+}
+
+
+/* ===============================
+   TICKER
+   =============================== */
+
+.page-feminines .ticker {
+  background: #DB3093;
+}
+
+
+/* ===============================
+   LIENS
+   =============================== */
+
+.page-feminines main a:hover {
+  color: #DB3093;
+}
+/* =====================================================
+   PÔLE FÉMININ — ROSE #DB3093
+   ===================================================== */
+
+body:has(.page-banner--feminines) {
+    --green: #DB3093;
+    --green-deep: #A51F6E;
+    --accent: #DB3093;
+}
+
+body:has(.page-banner--feminines) .topbar {
+    background: linear-gradient(
+        180deg,
+        #DB3093 0%,
+        #C62882 100%
+    ) !important;
+}
