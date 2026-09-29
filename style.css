@@ -1016,3 +1016,102 @@ html.no-intro #intro{ display:none; }
 .article-block h2:first-child{ margin-top:0; }
 .article-block p{ font-size:.98rem; }
 .article-block strong{ color:var(--white); }
+
+/* =========================
+   HORAIRES D'ENTRAÎNEMENT
+   ========================= */
+
+.schedule-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.schedule-head__pin {
+  font-size: 22px;
+}
+
+.schedule-head h2 {
+  margin: 0;
+}
+
+/* Tableau */
+.schedule-table-wrap {
+  overflow-x: auto;
+  border-radius: var(--radius);
+}
+
+.schedule-table {
+  width: 100%;
+  min-width: 850px;
+  border-collapse: collapse;
+  background: var(--panel);
+}
+
+.schedule-table th {
+  padding: 15px 12px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+}
+
+.schedule-table td {
+  padding: 15px 12px;
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+  font-weight: 500;
+}
+
+.schedule-table td:first-child {
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* Créneaux occupés */
+.schedule-table .slot {
+  background: rgba(0, 184, 123, .12);
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* Cases vides */
+.schedule-table .empty {
+  color: #aaa;
+  background: rgba(0, 0, 0, .02);
+}
+
+/* Effet au survol */
+.schedule-table .slot:hover {
+  background: rgba(0, 184, 123, .22);
+}
+
+/* Version sombre */
+.section--dark .schedule-table {
+  background: var(--panel-2);
+}
+
+.section--dark .schedule-table td {
+  border-color: rgba(255,255,255,.08);
+}
+
+.section--dark .schedule-table .empty {
+  background: rgba(255,255,255,.02);
+  color: #666;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .schedule-table-wrap {
+    overflow-x: auto;
+  }
+
+  .schedule-table {
+    min-width: 800px;
+  }
+
+  .schedule-head h2 {
+    font-size: 1.6rem;
+  }
+}
