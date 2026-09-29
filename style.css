@@ -1007,3 +1007,12 @@ html.no-intro #intro{ display:none; }
 }
 .btn--ghost-accent{ border:1.5px solid rgba(255,255,255,.3); color:var(--accent); }
 .btn--ghost-accent:hover{ border-color:var(--accent); transform:translateY(-2px); }
+
+/* =============== ARTICLE (texte long, type page IME) =============== */
+.article-block{ max-width:72ch; margin:0 auto; display:flex; flex-direction:column; gap:1.1rem; }
+.article-block h2{
+  font-size:1.5rem; color:var(--accent); margin-top:1.4rem;
+}
+.article-block h2:first-child{ margin-top:0; }
+.article-block p{ font-size:.98rem; }
+.article-block strong{ color:var(--white); }
