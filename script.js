@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---------- 3. COMPTE À REBOURS PROCHAIN MATCH ---------- */
   const countdownEl = document.getElementById('countdown');
   if (countdownEl){
-    const matchDate = new Date(2026, 9, 3, 18, 0, 0);
+    const matchDate = new Date(2026, 9, 10, 18, 0, 0);
 
     function updateCountdown(){
       const now = new Date();
@@ -219,6 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
     { date:'2026-09-19', opponent:'Mantois 78 FC',          home:false },
     { date:'2026-09-27', opponent:'Chevilly Larue Elan',   home:false  },
     { date:'2026-10-03', opponent:'FC 93 Bobigny',          home:true  },
+    { date:'2026-10-10', opponent:'Linas Montlhery ESA',      home:true  },
     { date:'2026-10-17', opponent:'St Brice F.C.',          home:false },
     { date:'2026-10-31', opponent:'Aulnaysienne ESP',       home:true  },
     { date:'2026-11-07', opponent:'Paris 13 Atletico 2',    home:true  },
