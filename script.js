@@ -222,6 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
     { date:'2026-10-10', opponent:'Linas Montlhery ESA',      home:true  },
     { date:'2026-10-17', opponent:'St Brice F.C.',          home:false },
     { date:'2026-10-21', opponent:'Blanc Mesnil',          home:true },
+    { date:'2026-10-25', opponent:'acp15',          home:false },
     { date:'2026-10-31', opponent:'Aulnaysienne ESP',       home:true  },
     { date:'2026-11-07', opponent:'Paris 13 Atletico 2',    home:true  },
     { date:'2026-11-21', opponent:'Mureaux OFC',            home:false },
