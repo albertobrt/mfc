@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---------- 3. COMPTE À REBOURS PROCHAIN MATCH ---------- */
   const countdownEl = document.getElementById('countdown');
   if (countdownEl){
-    const matchDate = new Date(2026, 10, 7, 18, 0, 0);
+    const matchDate = new Date(2026, 10, 14, 18, 0, 0);
 
     function updateCountdown(){
       const now = new Date();
